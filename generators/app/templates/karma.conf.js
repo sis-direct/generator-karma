@@ -1,7 +1,5 @@
 // Karma configuration
-// http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on <%= (new Date).toISOString().split('T')[0] %> using
-// <%= pkg.name %> <%= pkg.version %>
+// Generated on <%- (new Date).toISOString().split('T')[0] %>
 
 module.exports = function(config) {
   'use strict';
@@ -11,20 +9,20 @@ module.exports = function(config) {
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
-    basePath: '<%= basePath %>',
+    basePath: '<%- basePath %>',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
-    frameworks: [<%= templateArray(frameworks) %>],
+    frameworks: [<%- templateArray(frameworks) %>],
 
     // list of files / patterns to load in the browser
-    files: [<%= templateArray(configFiles, fileComments) %>],
+    files: [<%- templateArray(sourceFiles, sourceFileComments) %>],
 
     // list of files / patterns to exclude
-    exclude: [<%= templateArray(exclude) %>],
+    exclude: [<%- templateArray(excludeFiles) %>],
 
     // web server port
-    port: <%= port %>,
+    port: <%- port %>,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -34,10 +32,10 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: [<%= templateArray(browsers) %>],
+    browsers: [<%- templateArray(browsers) %>],
 
     // Which plugins to enable
-    plugins: [<%= templateArray(plugins) %>],
+    plugins: [<%- templateArray(plugins) %>],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit

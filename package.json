@@ -1,9 +1,8 @@
 {
   "name": "generator-karma",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Yeoman generator for Karma",
-  "license": "BSD",
-  "main": "app/index.js",
+  "license": "BSD-2-Clause",
   "repository": "yeoman/generator-karma",
   "author": "The Yeoman Team",
   "engines": {
@@ -11,11 +10,10 @@
     "npm": ">=1.2.10"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha"
   },
   "files": [
-    "app",
-    "templates"
+    "generators"
   ],
   "keywords": [
     "yeoman-generator",
@@ -25,11 +23,11 @@
     "karma"
   ],
   "dependencies": {
-    "underscore": "^1.6.0",
-    "yeoman-generator": "^0.19.1",
-    "sorted-object": "~1.0.0"
+    "yeoman-generator": "^0.22.5"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.1.0"
   }
 }
